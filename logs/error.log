@@ -6,3 +6,7 @@
 {"level":"error","message":"Error retrieving scheduler status: cronParser.parseExpression is not a function","timestamp":"2026-05-25 14:49:25"}
 {"level":"error","message":"Error syncing to Salesforce: {\"message\":\"Insert failed. First exception on row 0; first error: STORAGE_LIMIT_EXCEEDED, storage limit exceeded: []\",\"success\":false}","timestamp":"2026-05-25 14:50:00"}
 {"level":"error","message":"Error syncing to Salesforce: {\"message\":\"Insert failed. First exception on row 0; first error: STORAGE_LIMIT_EXCEEDED, storage limit exceeded: []\",\"success\":false}","timestamp":"2026-05-25 14:52:01"}
+{"level":"error","message":"Error syncing to Salesforce: {\"message\":\"Insert failed. First exception on row 0; first error: STORAGE_LIMIT_EXCEEDED, storage limit exceeded: []\",\"success\":false}","timestamp":"2026-05-25 14:53:00"}
+{"level":"error","message":"Error syncing to Salesforce: {\"message\":\"Insert failed. First exception on row 0; first error: STORAGE_LIMIT_EXCEEDED, storage limit exceeded: []\",\"success\":false}","timestamp":"2026-05-25 14:54:00"}
+{"level":"error","message":"Error syncing to Salesforce: {\"message\":\"Insert failed. First exception on row 0; first error: STORAGE_LIMIT_EXCEEDED, storage limit exceeded: []\",\"success\":false}","timestamp":"2026-05-25 14:55:00"}
+{"level":"error","message":"Error syncing to Salesforce: {\"message\":\"Insert failed. First exception on row 0; first error: STORAGE_LIMIT_EXCEEDED, storage limit exceeded: []\",\"success\":false}","timestamp":"2026-05-25 14:56:02"}

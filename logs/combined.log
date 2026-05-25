@@ -46,3 +46,27 @@
 {"level":"info","message":"Sending opportunity ID 24 to Salesforce...","timestamp":"2026-05-25 14:52:01"}
 {"level":"error","message":"Error syncing to Salesforce: {\"message\":\"Insert failed. First exception on row 0; first error: STORAGE_LIMIT_EXCEEDED, storage limit exceeded: []\",\"success\":false}","timestamp":"2026-05-25 14:52:01"}
 {"level":"info","message":"Opportunity ID 24 marked as 'Failed' with error.","timestamp":"2026-05-25 14:52:01"}
+{"level":"info","message":"Executing scheduled Salesforce sync job...","timestamp":"2026-05-25 14:53:00"}
+{"level":"info","message":"Starting Salesforce sync execution...","timestamp":"2026-05-25 14:53:00"}
+{"level":"info","message":"Found pending opportunity ID: 25 (Brown, Smitham and Miller - SaaS Subscription Renewal). Syncing...","timestamp":"2026-05-25 14:53:00"}
+{"level":"info","message":"Sending opportunity ID 25 to Salesforce...","timestamp":"2026-05-25 14:53:00"}
+{"level":"error","message":"Error syncing to Salesforce: {\"message\":\"Insert failed. First exception on row 0; first error: STORAGE_LIMIT_EXCEEDED, storage limit exceeded: []\",\"success\":false}","timestamp":"2026-05-25 14:53:00"}
+{"level":"info","message":"Opportunity ID 25 marked as 'Failed' with error.","timestamp":"2026-05-25 14:53:00"}
+{"level":"info","message":"Executing scheduled Salesforce sync job...","timestamp":"2026-05-25 14:54:00"}
+{"level":"info","message":"Starting Salesforce sync execution...","timestamp":"2026-05-25 14:54:00"}
+{"level":"info","message":"Found pending opportunity ID: 26 (Bergstrom - Treutel - SaaS Subscription Renewal). Syncing...","timestamp":"2026-05-25 14:54:00"}
+{"level":"info","message":"Sending opportunity ID 26 to Salesforce...","timestamp":"2026-05-25 14:54:00"}
+{"level":"error","message":"Error syncing to Salesforce: {\"message\":\"Insert failed. First exception on row 0; first error: STORAGE_LIMIT_EXCEEDED, storage limit exceeded: []\",\"success\":false}","timestamp":"2026-05-25 14:54:00"}
+{"level":"info","message":"Opportunity ID 26 marked as 'Failed' with error.","timestamp":"2026-05-25 14:54:00"}
+{"level":"info","message":"Executing scheduled Salesforce sync job...","timestamp":"2026-05-25 14:55:00"}
+{"level":"info","message":"Starting Salesforce sync execution...","timestamp":"2026-05-25 14:55:00"}
+{"level":"info","message":"Found pending opportunity ID: 27 (Rau - Gottlieb - SaaS Subscription Renewal). Syncing...","timestamp":"2026-05-25 14:55:00"}
+{"level":"info","message":"Sending opportunity ID 27 to Salesforce...","timestamp":"2026-05-25 14:55:00"}
+{"level":"error","message":"Error syncing to Salesforce: {\"message\":\"Insert failed. First exception on row 0; first error: STORAGE_LIMIT_EXCEEDED, storage limit exceeded: []\",\"success\":false}","timestamp":"2026-05-25 14:55:00"}
+{"level":"info","message":"Opportunity ID 27 marked as 'Failed' with error.","timestamp":"2026-05-25 14:55:00"}
+{"level":"info","message":"Executing scheduled Salesforce sync job...","timestamp":"2026-05-25 14:56:00"}
+{"level":"info","message":"Starting Salesforce sync execution...","timestamp":"2026-05-25 14:56:00"}
+{"level":"info","message":"Found pending opportunity ID: 28 (Cartwright Group - Consulting Services). Syncing...","timestamp":"2026-05-25 14:56:00"}
+{"level":"info","message":"Sending opportunity ID 28 to Salesforce...","timestamp":"2026-05-25 14:56:00"}
+{"level":"error","message":"Error syncing to Salesforce: {\"message\":\"Insert failed. First exception on row 0; first error: STORAGE_LIMIT_EXCEEDED, storage limit exceeded: []\",\"success\":false}","timestamp":"2026-05-25 14:56:02"}
+{"level":"info","message":"Opportunity ID 28 marked as 'Failed' with error.","timestamp":"2026-05-25 14:56:02"}
