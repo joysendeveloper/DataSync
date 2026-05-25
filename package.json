@@ -15,7 +15,16 @@
   "type": "commonjs",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
+    "build": "echo \"No build step required\"",
+    "db:migrate": "node scripts/db-migrate.js",
+    "db:reset": "node scripts/db-reset.js",
+    "db:seed": "node scripts/db-seed.js",
+    "docker:build": "docker build -t datasync-server .",
+    "docker:run": "docker-compose up -d",
+    "db:deploy": "npm run docker:build && npm run docker:run"
   },
   "keywords": [],
   "files": [
@@ -34,5 +43,9 @@
     "mysql2": "^3.22.3",
     "node-cron": "^4.2.1",
     "node-fetch": "^3.3.2"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^10.4.0",
+    "nodemon": "^3.1.14"
   }
 }
