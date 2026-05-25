@@ -27,6 +27,8 @@ async function migrate() {
                 close_date DATE,
                 lead_source VARCHAR(100),
                 contact_email VARCHAR(255) NOT NULL,
+                sync_status VARCHAR(50) DEFAULT 'Pending',
+                sync_error TEXT,
                 created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
                 updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
             )
@@ -46,6 +48,38 @@ async function migrate() {
             console.log("'status' column added successfully.");
         } else {
             console.log("'status' column already exists.");
+        }
+
+        // 4. Update existing opportunities table structure if sync_status column is missing
+        console.log("Checking if 'sync_status' column exists in 'opportunities' table...");
+        const [syncStatusColumns] = await db.query(
+            "SHOW COLUMNS FROM opportunities LIKE 'sync_status'"
+        );
+
+        if (syncStatusColumns.length === 0) {
+            console.log("Adding missing 'sync_status' column to 'opportunities' table...");
+            await db.query(
+                "ALTER TABLE opportunities ADD COLUMN sync_status VARCHAR(50) DEFAULT 'Pending'"
+            );
+            console.log("'sync_status' column added successfully.");
+        } else {
+            console.log("'sync_status' column already exists.");
+        }
+
+        // 5. Update existing opportunities table structure if sync_error column is missing
+        console.log("Checking if 'sync_error' column exists in 'opportunities' table...");
+        const [syncErrorColumns] = await db.query(
+            "SHOW COLUMNS FROM opportunities LIKE 'sync_error'"
+        );
+
+        if (syncErrorColumns.length === 0) {
+            console.log("Adding missing 'sync_error' column to 'opportunities' table...");
+            await db.query(
+                "ALTER TABLE opportunities ADD COLUMN sync_error TEXT"
+            );
+            console.log("'sync_error' column added successfully.");
+        } else {
+            console.log("'sync_error' column already exists.");
         }
 
         console.log("Database migration completed successfully!");

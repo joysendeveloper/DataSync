@@ -1,0 +1,48 @@
+{"level":"info","message":"Salesforce sync cron job scheduled to run: */1 * * * *","timestamp":"2026-05-25 14:45:53"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-05-25 14:45:53"}
+{"level":"info","message":"Executing scheduled Salesforce sync job...","timestamp":"2026-05-25 14:46:00"}
+{"level":"info","message":"Starting Salesforce sync execution...","timestamp":"2026-05-25 14:46:00"}
+{"level":"info","message":"Found pending opportunity ID: 19 (Hand, Hansen and Kuhic - Cloud Migration). Syncing...","timestamp":"2026-05-25 14:46:00"}
+{"level":"info","message":"Fetching new Salesforce access token...","timestamp":"2026-05-25 14:46:00"}
+{"level":"info","message":"Salesforce access token retrieved successfully.","timestamp":"2026-05-25 14:46:01"}
+{"level":"info","message":"Sending opportunity ID 19 to Salesforce...","timestamp":"2026-05-25 14:46:01"}
+{"level":"error","message":"Error syncing to Salesforce: {\"message\":\"Insert failed. First exception on row 0; first error: STORAGE_LIMIT_EXCEEDED, storage limit exceeded: []\",\"success\":false}","timestamp":"2026-05-25 14:46:01"}
+{"level":"info","message":"Opportunity ID 19 marked as 'Failed' with error.","timestamp":"2026-05-25 14:46:01"}
+{"level":"info","message":"Executing scheduled Salesforce sync job...","timestamp":"2026-05-25 14:47:00"}
+{"level":"info","message":"Starting Salesforce sync execution...","timestamp":"2026-05-25 14:47:00"}
+{"level":"info","message":"Found pending opportunity ID: 20 (Schneider - Anderson - Cloud Migration). Syncing...","timestamp":"2026-05-25 14:47:00"}
+{"level":"info","message":"Sending opportunity ID 20 to Salesforce...","timestamp":"2026-05-25 14:47:00"}
+{"level":"error","message":"Error syncing to Salesforce: {\"message\":\"Insert failed. First exception on row 0; first error: STORAGE_LIMIT_EXCEEDED, storage limit exceeded: []\",\"success\":false}","timestamp":"2026-05-25 14:47:00"}
+{"level":"info","message":"Opportunity ID 20 marked as 'Failed' with error.","timestamp":"2026-05-25 14:47:00"}
+{"level":"info","message":"Executing scheduled Salesforce sync job...","timestamp":"2026-05-25 14:48:00"}
+{"level":"info","message":"Starting Salesforce sync execution...","timestamp":"2026-05-25 14:48:00"}
+{"level":"info","message":"Found pending opportunity ID: 21 (Kunze, Kling and Roberts - Enterprise License). Syncing...","timestamp":"2026-05-25 14:48:00"}
+{"level":"info","message":"Sending opportunity ID 21 to Salesforce...","timestamp":"2026-05-25 14:48:00"}
+{"level":"error","message":"Error syncing to Salesforce: {\"message\":\"Insert failed. First exception on row 0; first error: STORAGE_LIMIT_EXCEEDED, storage limit exceeded: []\",\"success\":false}","timestamp":"2026-05-25 14:48:00"}
+{"level":"info","message":"Opportunity ID 21 marked as 'Failed' with error.","timestamp":"2026-05-25 14:48:00"}
+{"level":"error","message":"Error retrieving scheduler status: cronParser.parseExpression is not a function","timestamp":"2026-05-25 14:48:31"}
+{"level":"info","message":"Executing scheduled Salesforce sync job...","timestamp":"2026-05-25 14:49:00"}
+{"level":"info","message":"Starting Salesforce sync execution...","timestamp":"2026-05-25 14:49:00"}
+{"level":"info","message":"Found pending opportunity ID: 22 (Shields, Franey and Ebert - Consulting Services). Syncing...","timestamp":"2026-05-25 14:49:00"}
+{"level":"info","message":"Sending opportunity ID 22 to Salesforce...","timestamp":"2026-05-25 14:49:00"}
+{"level":"error","message":"Error syncing to Salesforce: {\"message\":\"Insert failed. First exception on row 0; first error: STORAGE_LIMIT_EXCEEDED, storage limit exceeded: []\",\"success\":false}","timestamp":"2026-05-25 14:49:00"}
+{"level":"info","message":"Opportunity ID 22 marked as 'Failed' with error.","timestamp":"2026-05-25 14:49:00"}
+{"level":"error","message":"Error retrieving scheduler status: cronParser.parseExpression is not a function","timestamp":"2026-05-25 14:49:25"}
+{"level":"info","message":"Executing scheduled Salesforce sync job...","timestamp":"2026-05-25 14:50:00"}
+{"level":"info","message":"Starting Salesforce sync execution...","timestamp":"2026-05-25 14:50:00"}
+{"level":"info","message":"Found pending opportunity ID: 23 (Yost and Sons - Cloud Migration). Syncing...","timestamp":"2026-05-25 14:50:00"}
+{"level":"info","message":"Sending opportunity ID 23 to Salesforce...","timestamp":"2026-05-25 14:50:00"}
+{"level":"error","message":"Error syncing to Salesforce: {\"message\":\"Insert failed. First exception on row 0; first error: STORAGE_LIMIT_EXCEEDED, storage limit exceeded: []\",\"success\":false}","timestamp":"2026-05-25 14:50:00"}
+{"level":"info","message":"Opportunity ID 23 marked as 'Failed' with error.","timestamp":"2026-05-25 14:50:00"}
+{"level":"info","message":"Salesforce sync cron job scheduled to run: */1 * * * *","timestamp":"2026-05-25 14:50:35"}
+{"level":"info","message":"Server running on port 3000","timestamp":"2026-05-25 14:50:35"}
+{"level":"info","message":"Scheduler stopped manually.","timestamp":"2026-05-25 14:50:50"}
+{"level":"info","message":"Salesforce sync cron job scheduled to run: */1 * * * *","timestamp":"2026-05-25 14:51:13"}
+{"level":"info","message":"Executing scheduled Salesforce sync job...","timestamp":"2026-05-25 14:52:00"}
+{"level":"info","message":"Starting Salesforce sync execution...","timestamp":"2026-05-25 14:52:00"}
+{"level":"info","message":"Found pending opportunity ID: 24 (Bosco-Franecki, Bailey and Boyer - Hardware Upgrade). Syncing...","timestamp":"2026-05-25 14:52:00"}
+{"level":"info","message":"Fetching new Salesforce access token...","timestamp":"2026-05-25 14:52:00"}
+{"level":"info","message":"Salesforce access token retrieved successfully.","timestamp":"2026-05-25 14:52:01"}
+{"level":"info","message":"Sending opportunity ID 24 to Salesforce...","timestamp":"2026-05-25 14:52:01"}
+{"level":"error","message":"Error syncing to Salesforce: {\"message\":\"Insert failed. First exception on row 0; first error: STORAGE_LIMIT_EXCEEDED, storage limit exceeded: []\",\"success\":false}","timestamp":"2026-05-25 14:52:01"}
+{"level":"info","message":"Opportunity ID 24 marked as 'Failed' with error.","timestamp":"2026-05-25 14:52:01"}
