@@ -22,8 +22,8 @@
     "db:migrate": "node scripts/db-migrate.js",
     "db:reset": "node scripts/db-reset.js",
     "db:seed": "node scripts/db-seed.js",
-    "docker:build": "docker build -t datasync-server .",
-    "docker:run": "docker-compose up -d",
+    "docker:build": "docker build -t datasync-server -f docker/DockerFIle .",
+    "docker:run": "docker-compose -f docker/docker-compose.yml up -d",
     "db:deploy": "npm run docker:build && npm run docker:run"
   },
   "keywords": [],

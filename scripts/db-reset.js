@@ -28,7 +28,7 @@ async function reset() {
 
         await db.query(`
             CREATE TABLE IF NOT EXISTS opportunities (
-                id INT AUTO_INCREMENT PRIMARY KEY,
+                id VARCHAR(36) DEFAULT (UUID()) PRIMARY KEY,
                 name VARCHAR(255) NOT NULL,
                 stage VARCHAR(100) NOT NULL,
                 status VARCHAR(50) DEFAULT 'New',
@@ -37,6 +37,8 @@ async function reset() {
                 close_date DATE,
                 lead_source VARCHAR(100),
                 contact_email VARCHAR(255) NOT NULL,
+                sync_status VARCHAR(50) DEFAULT 'Pending',
+                sync_error TEXT,
                 created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
                 updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
             )

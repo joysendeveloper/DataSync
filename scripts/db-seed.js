@@ -1,4 +1,5 @@
 const { faker } = require("@faker-js/faker");
+const crypto = require("crypto");
 const db = require("../src/db/connection.js");
 
 const STAGE_PROBABILITIES = {
@@ -61,7 +62,10 @@ async function seed() {
             const contactEmail = faker.internet.email({ provider: 'gmail.com' }).toLowerCase();
             const status = faker.helpers.arrayElement(["New", "In Progress", "Closed Won", "Closed Lost"]);
 
+            const id = crypto.randomUUID();
+
             opportunities.push([
+                id,
                 name,
                 stage,
                 status,
@@ -74,7 +78,7 @@ async function seed() {
         }
 
         await db.query(
-            "INSERT INTO opportunities (name, stage, status, amount, probability, close_date, lead_source, contact_email) VALUES ?",
+            "INSERT INTO opportunities (id, name, stage, status, amount, probability, close_date, lead_source, contact_email) VALUES ?",
             [opportunities]
         );
         console.log("Seeded 50 opportunities.");

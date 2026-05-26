@@ -18,7 +18,7 @@ async function migrate() {
         console.log("Creating 'opportunities' table if it doesn't exist...");
         await db.query(`
             CREATE TABLE IF NOT EXISTS opportunities (
-                id INT AUTO_INCREMENT PRIMARY KEY,
+                id VARCHAR(36) DEFAULT (UUID()) PRIMARY KEY,
                 name VARCHAR(255) NOT NULL,
                 stage VARCHAR(100) NOT NULL,
                 status VARCHAR(50) DEFAULT 'New',

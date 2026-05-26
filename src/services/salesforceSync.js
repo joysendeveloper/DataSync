@@ -51,7 +51,7 @@ async function syncSingleOpportunity() {
     let rows;
     try {
         [rows] = await db.query(
-            "SELECT * FROM opportunities WHERE sync_status = 'Pending' ORDER BY id ASC LIMIT 1"
+            "SELECT * FROM opportunities WHERE sync_status = 'Pending' ORDER BY created_at ASC, id ASC LIMIT 1"
         );
     } catch (dbError) {
         logger.error("Error fetching opportunity from database: " + dbError.message);
@@ -112,7 +112,7 @@ async function syncSingleOpportunity() {
             cachedAccessToken = null;
             try {
                 const token = await getAccessToken();
-                const response = await axios.post(process.env.SF_CREATE_OPPORTUNITIES_URL, payload, {
+                const response = await axios.post(process.env.SF_BASE_URL + "/services/apexrest/opportunities/create", payload, {
                     headers: {
                         "Authorization": `Bearer ${token}`,
                         "Content-Type": "application/json",
