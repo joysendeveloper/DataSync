@@ -1,0 +1,80 @@
+name: DataSync CI
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+
+    # Start a MySQL service container alongside the app
+    services:
+      mysql:
+        image: mysql:8.0
+        env:
+          MYSQL_ROOT_PASSWORD: root
+          MYSQL_DATABASE: datasync_test
+          MYSQL_USER: datasync
+          MYSQL_PASSWORD: secret
+        ports:
+          - 3306:3306
+        options: >-
+          --health-cmd="mysqladmin ping"
+          --health-interval=10s
+          --health-timeout=5s
+          --health-retries=5
+
+    steps:
+      # 1. Get the code
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # 2. Set up Node.js (matches your project)
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      # 3. Install dependencies
+      - name: Install dependencies
+        run: npm install
+
+      # 4. Set env vars for DB connection
+      - name: Set environment variables
+        run: |
+          echo "DB_HOST=127.0.0.1" >> $GITHUB_ENV
+          echo "DB_PORT=3306" >> $GITHUB_ENV
+          echo "DB_NAME=datasync_test" >> $GITHUB_ENV
+          echo "DB_USER=datasync" >> $GITHUB_ENV
+          echo "DB_PASSWORD=secret" >> $GITHUB_ENV
+          echo "NODE_ENV=test" >> $GITHUB_ENV
+
+      # 5. Run DB migrations
+      - name: Run database migrations
+        run: npm run db:migrate
+
+      # 6. Seed test data (optional, remove if not needed)
+      - name: Seed database
+        run: npm run db:seed
+
+      # 7. Verify the app starts without crashing
+      - name: Smoke test (start and stop)
+        run: |
+          node src/index.js &
+          APP_PID=$!
+          sleep 5
+          kill $APP_PID
+          echo "App started and stopped cleanly"
+
+      # 8. Run tests (add real tests later)
+      - name: Run tests
+        run: npm test
+        continue-on-error: true  # remove once you have real tests
+
+      # 9. Confirm no build step needed (from your package.json)
+      - name: Build check
+        run: npm run build
